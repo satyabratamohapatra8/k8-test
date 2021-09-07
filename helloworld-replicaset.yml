@@ -4,7 +4,7 @@ metadata:
   name: helloworld-controller
   labels:
     app: helloworld
-sepc:
+spec:
   replicas: 10
   selector:
     matchLabels:
