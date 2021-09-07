@@ -8,7 +8,7 @@ sepc:
   replicas: 10
   selector:
     matchLabels:
-      app:helloworld
+      app: helloworld
   template:
     metadata:
       labels:
