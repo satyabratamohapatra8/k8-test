@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: python-controller
+  labels:
+    app: python-image
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: python-image
+  template:
+    metadata:
+      labels:
+        app: python-image
+    spec:
+      containers:
+      - name: python-demo
+        image: arjunachari12/my-python-image
+        ports:
+        - name: pythons-port
+          containerPort: 3000
