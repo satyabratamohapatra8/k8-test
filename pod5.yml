@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod5
+  labels:
+    app: python-image
+spec:
+  containers:
+  - name: python-demo
+    image: arjunachari12/my-python-image
+    ports:
+    - name: pythons-port
+      containerPort: 5000
