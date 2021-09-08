@@ -1,16 +1,18 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mysql-secret-pod
+  name: database
+  labels:
+    app: database
 spec:
   containers:
   - name: mysql
-    image: mysql
+    image: mysql:5.7
     ports:
     - name: mysql-port
       containerPort: 3306
     env:
-    - name: MYSQL_ROOT_PASSWORD
+      - name: MYSQL_ROOT_PASSWORD
         valueFrom:
           secretKeyRef:
             name: helloworld-secrets
