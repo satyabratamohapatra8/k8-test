@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-metadat:
+metadata:
   name: helloworld-deployment
 spec:
   replicas: 5
